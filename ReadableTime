@@ -1,0 +1,22 @@
+public class HumanReadableTime {
+  public static String makeReadable(int seconds) {
+    int hh = seconds/3600;
+    int mm = (seconds%3600)/60;
+    int ss = seconds - (hh*3600) - (mm*60);
+    String h = "";
+    String m = "";
+    String s = "";
+    if(hh==0){hh=00;}
+    if(mm==0){mm=00;}
+    if(ss==0){ss=00;}
+    if(hh<10){
+    h = "0"+Integer.toString(hh);}
+    else{h=Integer.toString(hh);}
+    if(mm<10){m = "0"+Integer.toString(mm);}
+    else{m=Integer.toString(mm);}
+    if(ss<10){s = "0"+Integer.toString(ss);}
+    else{s = Integer.toString(ss);}
+    
+    return h+":"+m+":"+s;
+  }
+}
